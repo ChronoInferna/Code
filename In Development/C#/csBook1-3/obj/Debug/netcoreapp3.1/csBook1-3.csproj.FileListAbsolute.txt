@@ -1,0 +1,13 @@
+F:\oliver\=Code\In Development\C#\csBook1-3\bin\Debug\netcoreapp3.1\csBook1-3.exe
+F:\oliver\=Code\In Development\C#\csBook1-3\bin\Debug\netcoreapp3.1\csBook1-3.deps.json
+F:\oliver\=Code\In Development\C#\csBook1-3\bin\Debug\netcoreapp3.1\csBook1-3.runtimeconfig.json
+F:\oliver\=Code\In Development\C#\csBook1-3\bin\Debug\netcoreapp3.1\csBook1-3.runtimeconfig.dev.json
+F:\oliver\=Code\In Development\C#\csBook1-3\bin\Debug\netcoreapp3.1\csBook1-3.dll
+F:\oliver\=Code\In Development\C#\csBook1-3\bin\Debug\netcoreapp3.1\csBook1-3.pdb
+F:\oliver\=Code\In Development\C#\csBook1-3\obj\Debug\netcoreapp3.1\csBook1-3.csprojAssemblyReference.cache
+F:\oliver\=Code\In Development\C#\csBook1-3\obj\Debug\netcoreapp3.1\csBook1-3.csproj.CoreCompileInputs.cache
+F:\oliver\=Code\In Development\C#\csBook1-3\obj\Debug\netcoreapp3.1\csBook1-3.AssemblyInfoInputs.cache
+F:\oliver\=Code\In Development\C#\csBook1-3\obj\Debug\netcoreapp3.1\csBook1-3.AssemblyInfo.cs
+F:\oliver\=Code\In Development\C#\csBook1-3\obj\Debug\netcoreapp3.1\csBook1-3.dll
+F:\oliver\=Code\In Development\C#\csBook1-3\obj\Debug\netcoreapp3.1\csBook1-3.pdb
+F:\oliver\=Code\In Development\C#\csBook1-3\obj\Debug\netcoreapp3.1\csBook1-3.genruntimeconfig.cache

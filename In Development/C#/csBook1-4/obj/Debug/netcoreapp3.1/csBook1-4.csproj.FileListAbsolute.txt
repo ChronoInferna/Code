@@ -1,0 +1,4 @@
+F:\oliver\=Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.csprojAssemblyReference.cache
+F:\oliver\=Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.csproj.CoreCompileInputs.cache
+F:\oliver\=Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.AssemblyInfoInputs.cache
+F:\oliver\=Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.AssemblyInfo.cs
