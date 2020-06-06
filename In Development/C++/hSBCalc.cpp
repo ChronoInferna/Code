@@ -2,13 +2,7 @@
 #include <iomanip>  // For setprecision() b/c I don't want too many decimals
 #include <map>      // For fuelMap and speedUpgradeMap
 
-// Suckers I'm gonna use "using namespace std;" too bad
-using namespace std;
-
-/*
-FIXME:
--Always 0 if no fuel?    
-*/
+using namespace std; // Suckers I'm gonna use "using namespace std;" too bad
 
 /*
 TODO:
@@ -38,7 +32,7 @@ int main()
   // Bonus speed total
   double bonusSpeed = 0;
   // Variable saying if you're using diamond spreading or not, which then adds to total profit
-  bool diamondSpreading;
+  bool diamondSpreading = false;
 
   // Output variable, displayed at the end
   double profit;
