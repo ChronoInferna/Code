@@ -5,3 +5,4 @@ void menu();
 void checkSchedule();
 void newEvent();
 void editEvent();
+void deleteEvent();

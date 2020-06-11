@@ -1,8 +1,9 @@
 #include <iostream>
 #include <fstream> // Included so you can store data for future reference
-#include "weeklySchedule.hpp"
+#include "menu.hpp"
+#include "event.hpp"
 
-using namespace std;
+using namespace std; // This is a basic program, bugger off
 
 /*
 TODO:
@@ -10,6 +11,7 @@ TODO:
 -Information for each event: Time, end time, day of the week (multiple allowed), all day event or not, description, where, transportation? Make sure that depending on like, all day or not, it doesn't ask certain questions like time b/c it doesn't need to
 -Edits event option: choose which part of the information you want to change
 -For new event, seperate variables for each part, make sure to have titles for all of them, then you can ask which part you want to edit (Make sure that you don't have any variables that you can ask for that you don't need, i.e. time if it's all day)
+-When checking schedule or something, set the data values in the check schedule function by reading the text file.
 */
 
 int main()
@@ -47,6 +49,11 @@ int main()
         // Edits event
         case 3:
             editEvent();
+            break;
+
+        // Deletes event
+        case 4:
+            deleteEvent();
             break;
 
         // Exits program
@@ -96,10 +103,32 @@ void checkSchedule()
 {
 }
 
+/*
+TODO:
+-Write all this data to text file
+*/
 void newEvent()
 {
+    Event newEvent;
+
+    // Asks for name
+    cout << "What is your event called?" << endl;
+    newEvent.setName();
+    // Asks for all day
+    cout << "Is your event all day? (0 for false, 1 for true)" << endl;
+    newEvent.setAllDay();
+    // If all day is true, doesn't ask, but if not, asks for time. Or ask for military time then add a ":"
+    if (newEvent.eventAllDay == false)
+    {
+        cout << "What time is the event at?" << endl;
+        newEvent.setTime();
+    }
 }
 
 void editEvent()
+{
+}
+
+void deleteEvent()
 {
 }
