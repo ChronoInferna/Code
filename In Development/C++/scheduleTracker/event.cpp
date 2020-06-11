@@ -1,5 +1,6 @@
 #include "event.hpp"
 
+// Not using whole std namespace b/c of Event class
 using std::cin;
 using std::cout;
 using std::endl;
@@ -36,4 +37,26 @@ void Event::setTime()
 int Event::getTime()
 {
     return eventTime;
+}
+
+// Location funcions
+void Event::setLocation()
+{
+    cin >> eventLocation;
+    cout << endl;
+}
+string Event::getLocation()
+{
+    return eventLocation;
+}
+
+// Description functions
+void Event::setDescription()
+{
+    cin >> eventDescription;
+    cout << endl;
+}
+string Event::getDescription()
+{
+    return eventDescription;
 }

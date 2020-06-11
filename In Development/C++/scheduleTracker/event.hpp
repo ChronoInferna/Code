@@ -2,16 +2,17 @@
 #include <map>
 #include <ctime>
 
-using std::map;
 using std::string;
 
 class Event
 {
 public:
     // Event variables
-    string eventName; // Name of event
-    bool eventAllDay; // All day or not
-    int eventTime;    // Int for now, eventually change to a time struct
+    string eventName;        // Name of event
+    bool eventAllDay;        // All day or not
+    int eventTime;           // Int for now, eventually change to a time struct
+    string eventLocation;    // Location
+    string eventDescription; // Description of event
 
     // Time functions
     void setName();
@@ -24,5 +25,13 @@ public:
     // Time functions
     void setTime();
     int getTime();
+
+    // Location functions
+    void setLocation();
+    string getLocation();
+
+    // Description functions
+    void setDescription();
+    string getDescription();
 };
-// need a destructor or smthn
+// Needs a destructor or smthn

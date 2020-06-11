@@ -8,10 +8,11 @@ using namespace std; // This is a basic program, bugger off
 /*
 TODO:
 -Seasonal events, i.e. holidays etc. that are automatic
--Information for each event: Time, end time, day of the week (multiple allowed), all day event or not, description, where, transportation? Make sure that depending on like, all day or not, it doesn't ask certain questions like time b/c it doesn't need to
+-Information for each event: Time, end time, day of the week (multiple allowed), all day event or not, description, where? Make sure that depending on like, all day or not, it doesn't ask certain questions like time b/c it doesn't need to
 -Edits event option: choose which part of the information you want to change
 -For new event, seperate variables for each part, make sure to have titles for all of them, then you can ask which part you want to edit (Make sure that you don't have any variables that you can ask for that you don't need, i.e. time if it's all day)
 -When checking schedule or something, set the data values in the check schedule function by reading the text file.
+-Maybe use some number in the text file, each event gets a number, adds one every time (maybe see what previous one was, then ++), and if delete, use iterator to subtract one from each event that has a higher number
 */
 
 int main()
@@ -114,15 +115,25 @@ void newEvent()
     // Asks for name
     cout << "What is your event called?" << endl;
     newEvent.setName();
+
     // Asks for all day
     cout << "Is your event all day? (0 for false, 1 for true)" << endl;
     newEvent.setAllDay();
+
     // If all day is true, doesn't ask, but if not, asks for time. Or ask for military time then add a ":"
     if (newEvent.eventAllDay == false)
     {
         cout << "What time is the event at?" << endl;
         newEvent.setTime();
     }
+
+    // Asks for location
+    cout << "Where is this event?" << endl;
+    newEvent.setLocation();
+
+    // Asks for description
+    cout << "Provide a description for this event:" << endl;
+    newEvent.setDescription();
 }
 
 void editEvent()
