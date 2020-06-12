@@ -15,6 +15,9 @@ TODO:
 -Maybe use some number in the text file, each event gets a number, adds one every time (maybe see what previous one was, then ++), and if delete, use iterator to subtract one from each event that has a higher number
 */
 
+// File ofstream object
+ofstream g_wholeSchedule; // Text file that contains entire schedule
+
 int main()
 {
     // Variables
@@ -104,13 +107,31 @@ void checkSchedule()
 {
 }
 
-/*
-TODO:
--Write all this data to text file
-*/
 void newEvent()
 {
+    // Event to write to file
     Event newEvent;
+
+    // Event number, to be changed around, basically an ID
+    int eventNumber;
+
+    // Opens to read previous event number
+    g_wholeSchedule.open("schedule.txt", ios::in | ios::app); // Open for input to read previous event number
+
+    /*
+    TODO:
+    -Eventually will make is to read the last event's ID, then add one, creating a new ID
+    */
+
+    // Close it so I can open it in output mode
+    g_wholeSchedule.close();
+
+    // From here, all code is to input data from user, and write
+    g_wholeSchedule.open("schedule.txt", ios::out | ios::app); // Open for output to write in
+
+    // Writes down eventNumber from before, and other info
+    g_wholeSchedule << "Event ID: " << eventNumber << endl;
+    g_wholeSchedule << "Event Details:" << endl;
 
     // Asks for name
     cout << "What is your event called?" << endl;
@@ -134,6 +155,8 @@ void newEvent()
     // Asks for description
     cout << "Provide a description for this event:" << endl;
     newEvent.setDescription();
+
+    g_wholeSchedule.close();
 }
 
 void editEvent()

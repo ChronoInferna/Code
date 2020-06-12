@@ -1,5 +1,4 @@
 #include <iostream>
-#include <map>
 #include <ctime>
 
 using std::string;
@@ -34,4 +33,3 @@ public:
     void setDescription();
     string getDescription();
 };
-// Needs a destructor or smthn
