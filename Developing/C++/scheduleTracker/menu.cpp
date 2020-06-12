@@ -8,9 +8,8 @@ using namespace std; // This is a basic program, bugger off
 /*
 TODO:
 -Seasonal events, i.e. holidays etc. that are automatic
--Information for each event: Time, end time, day of the week (multiple allowed), all day event or not, description, where? Make sure that depending on like, all day or not, it doesn't ask certain questions like time b/c it doesn't need to
 -Edits event option: choose which part of the information you want to change
--For new event, seperate variables for each part, make sure to have titles for all of them, then you can ask which part you want to edit (Make sure that you don't have any variables that you can ask for that you don't need, i.e. time if it's all day)
+-Event dtails to add: Days of the week, one-time event
 -When checking schedule or something, set the data values in the check schedule function by reading the text file.
 -Maybe use some number in the text file, each event gets a number, adds one every time (maybe see what previous one was, then ++), and if delete, use iterator to subtract one from each event that has a higher number
 */
@@ -113,15 +112,16 @@ void newEvent()
     Event newEvent;
 
     // Event number, to be changed around, basically an ID
-    int eventNumber;
+    int eventNumber = 0;
 
     // Opens to read previous event number
     g_wholeSchedule.open("schedule.txt", ios::in | ios::app); // Open for input to read previous event number
 
 /*
 TODO:
--Eventually will make is to read the last event's ID, then add one, creating a new ID
+-Eventually will make is to read the last event's ID, then add one, creating a new ID (use "if" to check if there actually anything there)
 -Also use commas when doing output
+-Default ID is 0
 */
 
     // Close it so I can open it in output mode
@@ -134,35 +134,35 @@ TODO:
 
     // Writes down eventNumber from before, and other info
     g_wholeSchedule << "Event ID: " << eventNumber << endl;
-    g_wholeSchedule << "Event Details:" << endl;
+    g_wholeSchedule << "---Event Details---" << endl;
 
     // Asks for name
     cout << "What is your event called?" << endl;
     newEvent.setName();
-    g_wholeSchedule << newEvent.eventName << ", ";
+    g_wholeSchedule << "Event Name: " << newEvent.eventName << endl;
 
     // Asks for all day
     cout << "Is your event all day? (0 for false, 1 for true)" << endl;
     newEvent.setAllDay();
-    g_wholeSchedule << newEvent.eventAllDay << ", ";
+    g_wholeSchedule << "All Day: " << newEvent.eventAllDay << endl;
 
     // If all day is true, doesn't ask, but if not, asks for time. Or ask for military time then add a ":"
     if (newEvent.eventAllDay == false)
     {
-        cout << "What time is the event at?" << endl;
+        cout << "What time is the event at?" << endl; // TODO: Specify later the format (see event.hpp), make sure no spaces
         newEvent.setTime();
-        g_wholeSchedule << newEvent.eventTime << ", ";
+        g_wholeSchedule << "Event Time: " << newEvent.eventTime << endl;
     }
 
     // Asks for location
     cout << "Where is this event?" << endl;
     newEvent.setLocation();
-    g_wholeSchedule << newEvent.eventLocation << ", ";
+    g_wholeSchedule << "Event Location: " << newEvent.eventLocation << endl;
 
     // Asks for description
     cout << "Provide a description for this event:" << endl;
     newEvent.setDescription();
-    g_wholeSchedule << newEvent.eventDescription << endl << endl;
+    g_wholeSchedule << "Event Description: " << newEvent.eventDescription << endl << endl;
 
     g_wholeSchedule.close();
 }

@@ -1,0 +1,8 @@
+Event ID: 0
+---Event Details---
+Event Name: Test
+All Day: 0
+Event Time: 1230
+Event Location: Home
+Event Description: 
+

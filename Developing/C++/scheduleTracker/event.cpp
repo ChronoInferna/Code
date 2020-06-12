@@ -9,7 +9,8 @@ using std::string;
 // Name functions
 void Event::setName()
 {
-    cin >> eventName;
+    std::getline(cin, eventName); // Buffer b/c this is after a cin
+    std::getline(cin, eventName);
     cout << endl;
 }
 string Event::getName()
@@ -42,7 +43,8 @@ int Event::getTime()
 // Location funcions
 void Event::setLocation()
 {
-    cin >> eventLocation;
+    std::getline(cin, eventLocation); // Buffer b/c after a cin
+    std::getline(cin, eventLocation);
     cout << endl;
 }
 string Event::getLocation()
@@ -53,7 +55,7 @@ string Event::getLocation()
 // Description functions
 void Event::setDescription()
 {
-    cin >> eventDescription;
+    std::getline(cin, eventLocation); // No buffer b/c not after a cin
     cout << endl;
 }
 string Event::getDescription()
