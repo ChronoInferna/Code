@@ -16,7 +16,7 @@ TODO:
 */
 
 // File ofstream object
-ofstream g_wholeSchedule; // Text file that contains entire schedule
+fstream g_wholeSchedule; // Text file that contains entire schedule
 
 int main()
 {
@@ -127,8 +127,10 @@ TODO:
     // Close it so I can open it in output mode
     g_wholeSchedule.close();
 
-    // From here, all code is to input data from user, and write
-    g_wholeSchedule.open("schedule.txt", ios::out | ios::app); // Open for output to write in
+    // Open for output to write in
+    g_wholeSchedule.open("schedule.txt", ios::out | ios::app);
+
+    // Next lines ask for any input, the writes in text file
 
     // Writes down eventNumber from before, and other info
     g_wholeSchedule << "Event ID: " << eventNumber << endl;
@@ -137,25 +139,30 @@ TODO:
     // Asks for name
     cout << "What is your event called?" << endl;
     newEvent.setName();
+    g_wholeSchedule << newEvent.eventName << ", ";
 
     // Asks for all day
     cout << "Is your event all day? (0 for false, 1 for true)" << endl;
     newEvent.setAllDay();
+    g_wholeSchedule << newEvent.eventAllDay << ", ";
 
     // If all day is true, doesn't ask, but if not, asks for time. Or ask for military time then add a ":"
     if (newEvent.eventAllDay == false)
     {
         cout << "What time is the event at?" << endl;
         newEvent.setTime();
+        g_wholeSchedule << newEvent.eventTime << ", ";
     }
 
     // Asks for location
     cout << "Where is this event?" << endl;
     newEvent.setLocation();
+    g_wholeSchedule << newEvent.eventLocation << ", ";
 
     // Asks for description
     cout << "Provide a description for this event:" << endl;
     newEvent.setDescription();
+    g_wholeSchedule << newEvent.eventDescription << endl << endl;
 
     g_wholeSchedule.close();
 }
