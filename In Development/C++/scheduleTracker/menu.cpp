@@ -118,10 +118,11 @@ void newEvent()
     // Opens to read previous event number
     g_wholeSchedule.open("schedule.txt", ios::in | ios::app); // Open for input to read previous event number
 
-    /*
-    TODO:
-    -Eventually will make is to read the last event's ID, then add one, creating a new ID
-    */
+/*
+TODO:
+-Eventually will make is to read the last event's ID, then add one, creating a new ID
+-Also use commas when doing output
+*/
 
     // Close it so I can open it in output mode
     g_wholeSchedule.close();
