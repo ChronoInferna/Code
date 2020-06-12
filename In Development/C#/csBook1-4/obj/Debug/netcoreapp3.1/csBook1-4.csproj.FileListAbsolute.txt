@@ -2,3 +2,16 @@ F:\oliver\=Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.cs
 F:\oliver\=Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.csproj.CoreCompileInputs.cache
 F:\oliver\=Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.AssemblyInfoInputs.cache
 F:\oliver\=Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.AssemblyInfo.cs
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.csprojAssemblyReference.cache
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.AssemblyInfoInputs.cache
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.AssemblyInfo.cs
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.csproj.CoreCompileInputs.cache
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\bin\Debug\netcoreapp3.1\csBook1-4.exe
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\bin\Debug\netcoreapp3.1\csBook1-4.deps.json
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\bin\Debug\netcoreapp3.1\csBook1-4.runtimeconfig.json
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\bin\Debug\netcoreapp3.1\csBook1-4.runtimeconfig.dev.json
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\bin\Debug\netcoreapp3.1\csBook1-4.dll
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\bin\Debug\netcoreapp3.1\csBook1-4.pdb
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.dll
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.pdb
+C:\Users\child\Documents\GitHub\Code\In Development\C#\csBook1-4\obj\Debug\netcoreapp3.1\csBook1-4.genruntimeconfig.cache

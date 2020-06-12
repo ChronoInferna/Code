@@ -6,27 +6,36 @@ namespace csBook1_4
     {
         static void Main(string[] args)
         {
+            // Variables that (help) contain the numbers
+            int i;
+            int[] count = new int[10];
+
             // Output variables
-            double sum;
-            double avg;
+            int sum = 0;
+            double average;
 
-            double test;
-
-            // Asks for input
-            Console.WriteLine("Please input 10 numbers.");
-
-            // Loop that asks you for input then adds the input to the output variables
-            for (int i = 10; i > 0; i--)
+            // For loop that asks for numbers
+            for (i = 0; i < 10; i++)
             {
-                input = Convert.ToDouble(Console.ReadLine());
+                // Asks for number
+                Console.WriteLine("Enter Number " + (i + 1) + ":");
+
+                // Adds number from input
+                count[i] = Convert.ToInt32(Console.ReadLine());
             }
 
-            // Sets avg to sum, then divides by 10 to set to average
-            avg = sum / 10;
+            for (i = 0; i < 10; i++)
+            {
+                // Add numbers to sum
+                sum += count[i];
+            }
 
-            // Display
-            Console.WriteLine("The sum of the numbers is: " + sum);
-            Console.WriteLine("The average of the numbers is: " + avg);
+            // Display sum
+            Console.WriteLine("The sum of the numbers is " + sum);
+
+            // Set average, then display
+            average = sum / 10.0;
+            Console.WriteLine("The average of the numbers is " + average);
         }
     }
 }

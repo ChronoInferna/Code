@@ -37,7 +37,7 @@ namespace C_Learn
         public static string GetName()
         {
             // Input variable
-            string input;
+            string name;
 
             // Name input
             Console.WriteLine("Please Enter Your Name:");

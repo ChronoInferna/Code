@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YIiCUaDFOZI1oRCjCfpwWVWzg0GaPYOx//mgK24jXmZo7FFX+7RjetdL9/Cabk00Jmpspd4Org1Jhg+7MVjI2A==",
+  "dgSpecHash": "XmpG01DpiCgOx8SYBIfm0XLqZwynx2Gy65Zwn70mZ5YohCUKSmtjATbm1bDE/ZVLGtpCeDPnJNWnh+MX1I/aAQ==",
   "success": true,
-  "projectFilePath": "F:\\oliver\\=Code\\In Development\\C#\\csBook1-4\\csBook1-4.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\child\\Documents\\GitHub\\Code\\In Development\\C#\\csBook1-4\\csBook1-4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\child\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
   "logs": []
 }
