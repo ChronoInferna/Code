@@ -104,9 +104,9 @@ void menu()
          << "1) Check schedule" << endl
          << "2) New event" << endl
          << "3) Edit an event" << endl
-         << "4) Check seasonal events" << endl;
-    << "9) Exit program" << endl
-    << endl;
+         << "4) Check seasonal events" << endl
+         << "9) Exit program" << endl
+         << endl;
 }
 
 void checkSchedule()
@@ -124,11 +124,11 @@ void newEvent()
     // Opens to read previous event number
     g_wholeSchedule.open("schedule.txt", ios::in | ios::app); // Open for input to read previous event number
 
-// TODO:
-// -Eventually will make is to read the last event's ID, then add one, creating a new ID (use "if" to check if there actually anything there)
-// -Keep track of ID by using a number at the top
-// Pseudo:
-// int eventID = (read number at top, if none, write 1, increment that by 1, replace that number w/ new eventID)
+    // TODO:
+    // -Eventually will make is to read the last event's ID, then add one, creating a new ID (use "if" to check if there actually anything there)
+    // -Keep track of ID by using a number at the top
+    // Pseudo:
+    // int eventID = (read number at top, if none, write 1, increment that by 1, replace that number w/ new eventID)
 
     // Close it so I can open it in output mode
     g_wholeSchedule.close();
