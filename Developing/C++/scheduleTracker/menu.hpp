@@ -6,3 +6,4 @@ void checkSchedule();
 void newEvent();
 void editEvent();
 void deleteEvent();
+void checkSeasonalEvents();

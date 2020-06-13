@@ -5,17 +5,18 @@
 
 using namespace std; // This is a basic program, bugger off
 
-/*
-TODO:
--Seasonal events, i.e. holidays etc. that are automatic
--Edits event option: choose which part of the information you want to change
--Event dtails to add: Days of the week, one-time event
--When checking schedule or something, set the data values in the check schedule function by reading the text file.
--Maybe use some number in the text file, each event gets a number, adds one every time (maybe see what previous one was, then ++), and if delete, use iterator to subtract one from each event that has a higher number
-*/
+// TODO:
+// -Seasonal events, i.e. holidays etc. that are automatic
+// -Edits event option: choose which part of the information you want to change
+// -Event dtails to add: Days of the week, one-time event
+// -When checking schedule or something, set the data values in the check schedule function by reading the text file.
+// -Maybe use some number in the text file, each event gets a number, adds one every time (maybe see what previous one was, then ++), and if delete, use iterator to subtract one from each event that has a higher number
 
 // File ofstream object
 fstream g_wholeSchedule; // Text file that contains entire schedule
+
+// Global array here of seasonal events that are default for everyone (Christmas, July 4th, etc.)
+// NOTE: Only for American events
 
 int main()
 {
@@ -59,6 +60,11 @@ int main()
             deleteEvent();
             break;
 
+        // Checks seasonal events
+        case 5:
+            checkSeasonalEvents();
+            break;
+
         // Exits program
         case 9:
             cout << "Exiting program..." << endl
@@ -98,8 +104,9 @@ void menu()
          << "1) Check schedule" << endl
          << "2) New event" << endl
          << "3) Edit an event" << endl
-         << "9) Exit program" << endl
-         << endl;
+         << "4) Check seasonal events" << endl;
+    << "9) Exit program" << endl
+    << endl;
 }
 
 void checkSchedule()
@@ -112,17 +119,16 @@ void newEvent()
     Event newEvent;
 
     // Event number, to be changed around, basically an ID
-    int eventNumber = 0;
+    int eventID = 0;
 
     // Opens to read previous event number
     g_wholeSchedule.open("schedule.txt", ios::in | ios::app); // Open for input to read previous event number
 
-/*
-TODO:
--Eventually will make is to read the last event's ID, then add one, creating a new ID (use "if" to check if there actually anything there)
--Also use commas when doing output
--Default ID is 0
-*/
+// TODO:
+// -Eventually will make is to read the last event's ID, then add one, creating a new ID (use "if" to check if there actually anything there)
+// -Keep track of ID by using a number at the top
+// Pseudo:
+// int eventID = (read number at top, if none, write 1, increment that by 1, replace that number w/ new eventID)
 
     // Close it so I can open it in output mode
     g_wholeSchedule.close();
@@ -132,8 +138,8 @@ TODO:
 
     // Next lines ask for any input, the writes in text file
 
-    // Writes down eventNumber from before, and other info
-    g_wholeSchedule << "Event ID: " << eventNumber << endl;
+    // Writes down eventID from before, and other format stuff
+    g_wholeSchedule << "Event ID: " << eventID << endl;
     g_wholeSchedule << "---Event Details---" << endl;
 
     // Asks for name
@@ -162,8 +168,10 @@ TODO:
     // Asks for description
     cout << "Provide a description for this event:" << endl;
     newEvent.setDescription();
-    g_wholeSchedule << "Event Description: " << newEvent.eventDescription << endl << endl;
+    g_wholeSchedule << "Event Description: " << newEvent.eventDescription << endl
+                    << endl;
 
+    // Closes file for further use
     g_wholeSchedule.close();
 }
 
@@ -172,5 +180,9 @@ void editEvent()
 }
 
 void deleteEvent()
+{
+}
+
+void checkSesaonalEvents()
 {
 }
