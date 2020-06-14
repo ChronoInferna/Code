@@ -9,7 +9,7 @@ using std::string;
 // Name functions
 void Event::setName()
 {
-    std::getline(cin, eventName); // Buffer b/c this is after a cin
+    cin.ignore();
     std::getline(cin, eventName);
     cout << endl;
 }
@@ -43,7 +43,7 @@ int Event::getTime()
 // Location funcions
 void Event::setLocation()
 {
-    std::getline(cin, eventLocation); // Buffer b/c after a cin
+    cin.ignore();
     std::getline(cin, eventLocation);
     cout << endl;
 }
@@ -55,7 +55,8 @@ string Event::getLocation()
 // Description functions
 void Event::setDescription()
 {
-    std::getline(cin, eventLocation); // No buffer b/c not after a cin
+    cin.ignore();
+    std::getline(cin, eventDescription); // FIXME: Doesn't read first letter?
     cout << endl;
 }
 string Event::getDescription()

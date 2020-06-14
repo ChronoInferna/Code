@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream> // Included so you can store data for future reference
+#include <chrono>
 #include "menu.hpp"
 #include "event.hpp"
 
@@ -12,7 +13,6 @@ using namespace std; // This is a basic program, bugger off
 // -When checking schedule or something, set the data values in the check schedule function by reading the text file.
 // -Maybe use some number in the text file, each event gets a number, adds one every time (maybe see what previous one was, then ++), and if delete, use iterator to subtract one from each event that has a higher number
 
-// File ofstream object
 fstream g_wholeSchedule; // Text file that contains entire schedule
 
 // Global array here of seasonal events that are default for everyone (Christmas, July 4th, etc.)
@@ -20,7 +20,6 @@ fstream g_wholeSchedule; // Text file that contains entire schedule
 
 int main()
 {
-    // Variables
     int menuChoice;       // Input for which option you want
     bool menuChoiceError; // If you input something that's not allowed, this is true
 
@@ -115,11 +114,10 @@ void checkSchedule()
 
 void newEvent()
 {
-    // Event to write to file
-    Event newEvent;
-
-    // Event number, to be changed around, basically an ID
-    int eventID = 0;
+    Event newEvent;                    // Event to write to file
+    int identificationCounter;         // Holds ID counter at the beginning of the text file
+    int *identificationCounterPointer; // Pointer to identificationCounter
+    int eventID = 1;                   // Event number, to be changed around, basically an ID
 
     // Opens to read previous event number
     g_wholeSchedule.open("schedule.txt", ios::in | ios::app); // Open for input to read previous event number
@@ -130,16 +128,40 @@ void newEvent()
     // Pseudo:
     // int eventID = (read number at top, if none, write 1, increment that by 1, replace that number w/ new eventID)
 
+    // Gets the event ID from the ID counter
+    g_wholeSchedule >> identificationCounter;
+    identificationCounterPointer = &identificationCounter;
+
+    // If identificationCounter is never learned (like if it's not there in the text file) then print it out, otherwise increment identificationCounter
+    // FIXME: How do I make it so that if the var is undeclared b/c it doesn't read anything, it keeps it at 1?
+    if (!identificationCounterPointer)
+    {
+    }
+    else
+    {
+        // Remove previous number here
+        eventID++;
+    }
+
+    // Remove this later
+    cout << identificationCounter << endl
+         << endl; 
+
     // Close it so I can open it in output mode
     g_wholeSchedule.close();
 
     // Open for output to write in
     g_wholeSchedule.open("schedule.txt", ios::out | ios::app);
 
+    // Writes down eventID for future reference (ID counter), then moves to end of file to output
+    g_wholeSchedule << eventID;
+    g_wholeSchedule.seekp(0, ios::end);
+
     // Next lines ask for any input, the writes in text file
 
     // Writes down eventID from before, and other format stuff
-    g_wholeSchedule << "Event ID: " << eventID << endl;
+    g_wholeSchedule << endl
+                    << "Event ID: " << eventID << endl;
     g_wholeSchedule << "---Event Details---" << endl;
 
     // Asks for name
@@ -183,6 +205,6 @@ void deleteEvent()
 {
 }
 
-void checkSesaonalEvents()
+void checkSeasonalEvents()
 {
 }

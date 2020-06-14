@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <ctime>
+#include <chrono>
 
 using std::string;
 
@@ -10,7 +10,7 @@ public:
     // Event variables
     string eventName;        // Name of event
     bool eventAllDay;        // All day or not
-    int eventTime;           // TODO: Int for now, eventually change to a time struct, later identify the format (like 12:30 no pm or am, 24 hour time)
+    int eventTime;           // TODO: Int for now, eventually change to a time type, later identify the format (like 12:30 no pm or am, 24 hour time)
     string eventLocation;    // Location
     string eventDescription; // Description of event
 
