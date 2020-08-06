@@ -33,4 +33,10 @@ public:
     // Description functions
     void setDescription();
     string getDescription();
+
+    // Menu interaction
+    void readEvent();
+    void createEvent();
+    void editEvent();
+    void deleteEvent();
 };
