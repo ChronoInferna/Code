@@ -5,7 +5,7 @@
 using namespace std; // Suckers I'm gonna use "using namespace std;" too bad
 
 /*
-TODO:
+TODO: (if I wanna make it look nice)
 -Commas to output
 -Add space to output if numberOfMinions is double digits
 -Create function to ask question rather than manually?
